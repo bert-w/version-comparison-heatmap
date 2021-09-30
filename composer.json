@@ -1,0 +1,16 @@
+{
+    "name": "bert-w/version-comparison-heatmap",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/bert-w/version-comparison-heatmap/issues",
+        "source": "https://github.com/bert-w/version-comparison-heatmap"
+    },
+    "require": {
+        "sebastian/phpcpd": "6.0.3"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

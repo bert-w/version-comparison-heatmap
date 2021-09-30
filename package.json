@@ -1,0 +1,19 @@
+{
+  "license": "MIT",
+  "private": true,
+  "name": "version-comparison-heatmap",
+  "version": "1.0.0",
+  "main": "main.js",
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/bert-w/version-comparison-heatmap/issues"
+  },
+  "homepage": "https://github.com/bert-w/version-comparison-heatmap/#readme",
+  "dependencies": {
+    "commander": "^8.2.0",
+    "csv": "^5.3.2",
+    "jsinspect": "^0.12.7",
+    "pug": "^3.0.2",
+    "tmp": "^0.2.1"
+  }
+}

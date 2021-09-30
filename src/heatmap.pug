@@ -1,0 +1,23 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title= 'Heatmap'
+        style
+            include style.css
+
+    body
+        p= 'Hover over a cell to see more details'
+        table
+            each row, rIndex in matrix
+                tr
+                    th
+                        span= versions[rIndex]
+                    each column in row
+                        if column
+                            td(
+                                style= 'background-color: ' + column.color + '; width: ' + column.width + 'px; height: ' + column.height + 'px;'
+                                title= ['Left: ' + column.left, 'Right: ' + column.right, 'Matches: ' + column.matches, 'Left LOC: ' + column.loc_left, 'Right LOC: ' + column.loc_right, 'Ratio: ' + column.ratio].join('\n')
+                            )
+                        else
+                            td
