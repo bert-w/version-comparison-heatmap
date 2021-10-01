@@ -39,9 +39,9 @@ class Importer {
         if (this.options.tagsFromFile) {
             const data = fs.readFileSync(this.options.tagsFromFile, 'utf8')
             process.chdir(cwd);
-            return data.split(/\n/).map(i => i.trim()).filter(i => i).sort(collator.compare)
+            return data.split(/\n/).map(i => i.trim()).filter(i => i).sort(collator.compare);
         } else if (this.options.tags) {
-            return this.options.tags.split(',').filter(i => i).sort(collator.compare)
+            return this.options.tags.split(',').filter(i => i).sort(collator.compare);
         } else {
             throw new Error('You need to define the --tags or the --tags-from-file option.');
         }
@@ -49,10 +49,12 @@ class Importer {
     }
 
     import() {
+        const tags = this.parseTags();
+
         // Change directory to output directory.
         process.chdir(path.join(process.cwd(), this.options.outputDir));
 
-        this.parseTags().forEach((tag) => {
+        tags.forEach((tag) => {
             let args = `clone --depth 1 --branch ${tag} --single-branch ${this.options.url} ${tag}`;
             cp.spawn('git', args.split(' '), {stdio: 'inherit'});
         })
