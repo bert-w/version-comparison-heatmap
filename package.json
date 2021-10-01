@@ -2,7 +2,7 @@
   "license": "MIT",
   "private": true,
   "name": "version-comparison-heatmap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "main.js",
   "author": "",
   "bugs": {

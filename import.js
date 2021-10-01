@@ -3,7 +3,7 @@ const program = new Command('node import.js <github-url>');
 
 program
     .description('Load releases of a given Github repository using a list of tags')
-    .version('1.0.0')
+    .version('1.0.1')
     .argument('<url>','A URL to a Git repository, e.g. "https://github.com/github/catalyst.git"')
     .option('--list-tags', 'List all the available tags')
     .option('--output-dir <path>', 'Output directory relative to the project root that the results will be written to', 'imported')
